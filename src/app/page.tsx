@@ -98,7 +98,7 @@ export default function Home() {
                 height={20}
                 className="group-hover:rotate-180 transition-transform duration-500"
               />
-              Connect Wallet
+              Sign up with Abstract
             </span>
           </button>
         </div>
@@ -147,7 +147,7 @@ export default function Home() {
                       height={20}
                       className="group-hover:rotate-180 transition-transform duration-500"
                     />
-                    Connect with Abstract
+                    Connect here
                   </span>
                 </button>
               )}
