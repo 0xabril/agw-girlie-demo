@@ -104,7 +104,7 @@ export default function Welcome() {
                   ]),
                   address: "0xC4822AbB9F05646A9Ce44EFa6dDcda0Bf45595AA",
                   functionName: "mint",
-                  args: [address, BigInt(1)],
+                  args: [address || "0x", BigInt(1)],
                   paymaster: "0x5407B5040dec3D339A9247f3654E59EEccbb6391",
                   paymasterInput: getGeneralPaymasterInput({
                     innerInput: "0x",
