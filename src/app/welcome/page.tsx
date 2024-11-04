@@ -63,14 +63,14 @@ export default function Welcome() {
             />
           </div>
 
-          <h1 className="text-6xl font-bold text-pink-600 animate-pulse font-[family-name:var(--font-avenue-mono)]">
+          <h1 className="text-4xl md:text-6xl font-bold text-pink-600 animate-pulse font-[family-name:var(--font-avenue-mono)]">
             You&apos;re connected!
           </h1>
 
           <p className="text-2xl text-pink-500 animate-fade-in">
           </p>
 
-          <div className="backdrop-blur-xl bg-white/60 border-2 border-pink-200 rounded-2xl p-8 shadow-xl space-y-4">
+          <div className="backdrop-blur-xl bg-white/60 border-2 border-pink-200 rounded-2xl p-4 md:p-8 shadow-xl space-y-4">
             <p className="text-pink-600 font-medium">your awesome wallet:</p>
             <a 
               href={`https://explorer.testnet.abs.xyz/address/${address}`}
@@ -78,16 +78,16 @@ export default function Welcome() {
               rel="noopener noreferrer"
               className="block hover:opacity-75 transition-opacity"
             >
-              <p className="font-[family-name:var(--font-avenue-mono)] text-sm bg-pink-100/50 rounded-lg p-3 text-pink-500">
+              <p className="font-[family-name:var(--font-avenue-mono)] text-xs md:text-sm bg-pink-100/50 rounded-lg p-3 text-pink-500 break-all">
                 {address}
               </p>
             </a>
           </div>
 
-          <div className="flex gap-4 justify-center flex-col sm:flex-row">
+          <div className="flex gap-3 md:gap-4 justify-center flex-col sm:flex-row">
             <button
               onClick={logout}
-              className="group px-6 py-3 rounded-full bg-gradient-to-r from-pink-400 to-pink-500 text-white font-[family-name:var(--font-roobert)] hover:from-pink-500 hover:to-pink-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-pink-300/50"
+              className="group px-4 md:px-6 py-2 md:py-3 rounded-full bg-gradient-to-r from-pink-400 to-pink-500 text-white text-sm md:text-base font-[family-name:var(--font-roobert)] hover:from-pink-500 hover:to-pink-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-pink-300/50"
             >
               <span className="flex items-center gap-2">
                 Disconnect 
@@ -111,7 +111,7 @@ export default function Welcome() {
                   }),
                 })
               }
-              className="group px-6 py-3 rounded-full bg-gradient-to-r from-pink-400 to-pink-500 text-white font-[family-name:var(--font-roobert)] hover:from-pink-500 hover:to-pink-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-pink-300/50"
+              className="group px-4 md:px-6 py-2 md:py-3 rounded-full bg-gradient-to-r from-pink-400 to-pink-500 text-white text-sm md:text-base font-[family-name:var(--font-roobert)] hover:from-pink-500 hover:to-pink-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-pink-300/50"
             >
               <span className="flex items-center gap-2">
                 Submit Transaction
@@ -122,7 +122,7 @@ export default function Welcome() {
               href="https://docs.abs.xyz"
               target="_blank"
               rel="noopener noreferrer"
-              className="group px-6 py-3 rounded-full bg-white text-pink-500 font-[family-name:var(--font-roobert)] hover:bg-pink-100 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-pink-300/50"
+              className="group px-4 md:px-6 py-2 md:py-3 rounded-full bg-white text-pink-500 text-sm md:text-base font-[family-name:var(--font-roobert)] hover:bg-pink-100 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-pink-300/50"
             >
               <span className="flex items-center gap-2">
                 Learn More 
@@ -133,7 +133,7 @@ export default function Welcome() {
           </div>
 
           {!!transactionReceipt && (
-            <div className="mt-6 backdrop-blur-xl bg-white/60 border-2 border-pink-200 rounded-2xl p-6 shadow-xl">
+            <div className="mt-6 backdrop-blur-xl bg-white/60 border-2 border-pink-200 rounded-2xl p-4 md:p-6 shadow-xl">
               <p className="text-pink-600 font-medium mb-2">Transaction Status:</p>
               <a
                 href={`https://explorer.testnet.abs.xyz/tx/${transactionReceipt?.transactionHash}`}
@@ -142,10 +142,10 @@ export default function Welcome() {
                 className="block hover:opacity-75 transition-opacity"
               >
                 <div className="space-y-2">
-                  <p className="font-[family-name:var(--font-avenue-mono)] text-sm bg-pink-100/50 rounded-lg p-3 text-pink-500">
+                  <p className="font-[family-name:var(--font-avenue-mono)] text-xs md:text-sm bg-pink-100/50 rounded-lg p-3 text-pink-500">
                     Status: {transactionReceipt?.status === 'success' ? '✅ Success' : '❌ Failed'}
                   </p>
-                  <p className="font-[family-name:var(--font-avenue-mono)] text-xs bg-pink-100/50 rounded-lg p-3 text-pink-500">
+                  <p className="font-[family-name:var(--font-avenue-mono)] text-xs bg-pink-100/50 rounded-lg p-3 text-pink-500 break-all">
                     TX: {transactionReceipt?.transactionHash?.slice(0, 8)}...
                     {transactionReceipt?.transactionHash?.slice(-6)}
                   </p>
