@@ -73,7 +73,7 @@ export default function Welcome() {
           <div className="backdrop-blur-xl bg-white/60 border-2 border-pink-200 rounded-2xl p-8 shadow-xl space-y-4">
             <p className="text-pink-600 font-medium">your awesome wallet:</p>
             <a 
-              href={`hhttps://explorer.testnet.abs.xyz/address/${address}`}
+              href={`https://explorer.testnet.abs.xyz/address/${address}`}
               target="_blank"
               rel="noopener noreferrer"
               className="block hover:opacity-75 transition-opacity"
